@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "removeComments": true,
+        "preserveConstEnums": true,
+    },
+    "include": [
+        "e2e/**/*",
+        "lib/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
