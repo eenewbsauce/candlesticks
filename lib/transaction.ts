@@ -12,6 +12,6 @@ export default class Transaction {
         this.date = transaction.date;
         this.id = transaction.tid;
         this.price = transaction.price;
-        this.side = transaction.side;
+        this.side = Sides[transaction.side];
     }
 }

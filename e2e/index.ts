@@ -1,8 +1,10 @@
 import _ from 'lodash';
 
 import { txns } from './mockTransactions';
+import Transaction from '../lib/transaction';
 
-import Candlestick from '../lib/candlestick';
+const transactions = txns.map(txn => {
+    return new Transaction(txn);
+})
 
-const cs = new Candlestick('foo')
-console.log(cs.greet());
+console.log(transactions[0]);
