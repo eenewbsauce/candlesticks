@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc",
-    "e2e": "npm run compile; node e2e/index",
+    "compile": "tsc --watch",
+    "e2e": "concurrently --kill-others \"tsc -w\" \"nodemon ./e2e/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/eenewbsauce/candlesticks#readme",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "lodash": "^4.17.10",
+    "nodemon": "^1.17.5",
     "quadriga-api": "^1.0.0"
   },
   "devDependencies": {
@@ -31,6 +33,7 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-typescript": "^0.12.0",
     "jest": "^22.4.2",
     "sinon": "^4.4.2"
   }
