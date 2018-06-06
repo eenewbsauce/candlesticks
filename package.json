@@ -20,13 +20,13 @@
   },
   "homepage": "https://github.com/eenewbsauce/candlesticks#readme",
   "dependencies": {
-    "concurrently": "^3.5.1",
     "lodash": "^4.17.10",
-    "nodemon": "^1.17.5",
+    "moment": "^2.22.2",
     "quadriga-api": "^1.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "concurrently": "^3.5.1",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -35,6 +35,7 @@
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-typescript": "^0.12.0",
     "jest": "^22.4.2",
+    "nodemon": "^1.17.5",
     "sinon": "^4.4.2"
   }
 }
