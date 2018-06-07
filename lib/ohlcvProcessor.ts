@@ -18,11 +18,11 @@ export default class OhclvProcessor {
             .groupBy(txn => {
                 return `${ txn.date.format('YYYYMMDD') }_${ txn.date.hour() }h_${ Math.floor(txn.date.minute() / 5) * 5 }m`;
             })
-            .map(g => this.createOhlc(g))            
+            .map(g => this.createCandlestick(g))            
             .value();
     }
 
-    createOhlc(group: Transaction[]) {
+    createCandlestick(group: Transaction[]): Candlestick {
         const open = _.first(group).price;
         const close = _.last(group).price;
         const high = _.maxBy(group, 'price').price;
