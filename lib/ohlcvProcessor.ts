@@ -16,7 +16,10 @@ export default class OhclvProcessor {
     process(): any[] {
         return _.chain(this.transactions)
             .groupBy(txn => {
-                return `${ txn.date.format('YYYYMMDD') }_${ txn.date.hour() }h_${ Math.floor(txn.date.minute() / 5) * 5 }m`;
+                const hour = txn.date.hour();
+                const minute =  Math.floor(txn.date.minute() / this.period) * this.period;
+                
+                return `${ txn.date.format('YYYYMMDD') }_${ hour }h_${ minute }m`;
             })
             .map(g => this.createCandlestick(g))            
             .value();
