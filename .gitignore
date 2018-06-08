@@ -62,3 +62,7 @@ typings/
 
 # TypeScript
 *.js
+
+
+# npm
+package-lock.json
