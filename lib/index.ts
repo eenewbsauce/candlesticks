@@ -1,5 +1,5 @@
 import Candlestick from './candlestick';
-import CandlestickGroup from './candlestick';
+import CandlestickGroup from './candlestickGroup';
 import * as constants from './constants';
 import Ohclv from './ohclv';
 import OhclvProcessor from './ohlcvProcessor';
