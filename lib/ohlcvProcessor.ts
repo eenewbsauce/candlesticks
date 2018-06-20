@@ -26,6 +26,7 @@ export default class OhclvProcessor {
     }
 
     createCandlestick(group: Transaction[]): Candlestick {
+        const book = _.first(group).book;
         const open = _.first(group).price;
         const close = _.last(group).price;
         const high = _.maxBy(group, 'price').price;
@@ -34,7 +35,7 @@ export default class OhclvProcessor {
         const id = _.last(group).id;
         const period = this.period;
         const trades = group.length;
-        const ohclv = new Ohclv({ open, close, high, low, volume, id, period, trades });
+        const ohclv = new Ohclv({ book, open, close, high, low, volume, id, period, trades });
 
         return new Candlestick(ohclv);
     }

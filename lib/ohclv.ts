@@ -1,4 +1,5 @@
 export default class Ohclv {
+    book: string;
     open: number;
     close: number;
     high: number;
@@ -9,6 +10,7 @@ export default class Ohclv {
     trades: number;
 
     constructor(ochlvParams: any) {
+        this.book = ochlvParams.book;
         this.open = ochlvParams.open;
         this.high = ochlvParams.high;
         this.close = ochlvParams.close;

@@ -3,6 +3,7 @@
         "module": "CommonJS",
         "removeComments": true,
         "preserveConstEnums": true,
+        "target": "es6"
     },
     "include": [
         "e2e/**/*",

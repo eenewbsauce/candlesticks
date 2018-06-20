@@ -4,6 +4,7 @@ import { Sides } from './constants';
 
 export default class Transaction {
     amount: number;
+    book: string;
     date: moment.Moment;
     dateFormatted: string;
     id: number;
@@ -12,6 +13,7 @@ export default class Transaction {
 
     constructor(transaction: any) {
         this.amount = Number(transaction.amount);
+        this.book = transaction.book;
         this.date = moment(transaction.date);
         this.dateFormatted = this.date.format('YYYY-MM-DDThh:mm');
         this.id = transaction.id;
