@@ -7,6 +7,7 @@ export default class Candlestick {
     close: number;
     low: number;
     volume: number;
+    id: number;
     period: number;
     trades: number;
 
@@ -16,6 +17,7 @@ export default class Candlestick {
         this.high = ohclv.high;
         this.low = ohclv.low;
         this.volume = ohclv.volume;
+        this.id = ohclv.id;
         this.period = ohclv.period;
         this.trades = ohclv.trades;
     }

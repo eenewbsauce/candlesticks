@@ -4,6 +4,7 @@ export default class Ohclv {
     high: number;
     low: number;
     volume: number;
+    id: number;
     period: number;
     trades: number;
 
@@ -13,6 +14,7 @@ export default class Ohclv {
         this.close = ochlvParams.close;
         this.low = ochlvParams.low;
         this.volume = ochlvParams.volume;
+        this.id = ochlvParams.id;
         this.period = ochlvParams.period;
         this.trades = ochlvParams.trades;
     }

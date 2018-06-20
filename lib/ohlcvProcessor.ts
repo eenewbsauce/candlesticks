@@ -31,9 +31,10 @@ export default class OhclvProcessor {
         const high = _.maxBy(group, 'price').price;
         const low = _.minBy(group, 'price').price;
         const volume = _.sumBy(group, 'amount');
-        const trades = group.length;
+        const id = _.last(group).id;
         const period = this.period;
-        const ohclv = new Ohclv({ open, close, high, low, volume, period, trades });
+        const trades = group.length;
+        const ohclv = new Ohclv({ open, close, high, low, volume, id, period, trades });
 
         return new Candlestick(ohclv);
     }

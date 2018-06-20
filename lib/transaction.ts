@@ -11,12 +11,10 @@ export default class Transaction {
     side: string;
 
     constructor(transaction: any) {
-        const dateNumber = parseInt(`${transaction.date}000`);
-        
         this.amount = Number(transaction.amount);
-        this.date = moment(dateNumber);
+        this.date = moment(transaction.date);
         this.dateFormatted = this.date.format('YYYY-MM-DDThh:mm');
-        this.id = transaction.tid;
+        this.id = transaction.id;
         this.price = Number(transaction.price);
         this.side = Sides[transaction.side];
     }
