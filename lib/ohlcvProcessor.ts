@@ -32,7 +32,7 @@ export default class OhclvProcessor {
         const high = _.maxBy(group, 'price').price;
         const low = _.minBy(group, 'price').price;
         const volume = _.sumBy(group, 'amount');
-        const id = _.last(group).id;
+        const id = _.maxBy(group, 'id').id;
         const period = this.period;
         const trades = group.length;
         const ohclv = new Ohclv({ book, open, close, high, low, volume, id, period, trades });
